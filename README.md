@@ -13,7 +13,7 @@ History
 Zichan is a fork of [vichan](http://github.com/vichan-devel/vichan) designed primarily for textboard use. It is highly experimental and may contain leftovers.
 
 ### Maintainer timeline
-1. The zichan fork is created
+1. The zichan fork is created and maintained by an anonymous developer
 2. Community support for vichan by [@basedgentoo](https://github.com/basedgentoo), and [@RealAngeleno](https://github.com/RealAngeleno) - vichan
 3. Development Commission lead by [@basedgentoo](https://github.com/basedgentoo), [@kuz-sysadmin](https://github.com/kuz-sysadmin), and [@RealAngeleno](https://github.com/RealAngeleno). (2023 - 2023 )
 4. [@h00j](https://github.com/h00j) (2021 - ???)
