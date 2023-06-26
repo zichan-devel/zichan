@@ -10,7 +10,7 @@ The vichan documentation can be found on the [wiki](https://github.com/vichan-de
 
 History
 ------------
-zichan is a fork of [vichan](http://github.com/vichan-devel/vichan) designed primarily for textboard use. It is highly experimental and may contain leftovers.
+Zichan is a fork of [vichan](http://github.com/vichan-devel/vichan) designed primarily for textboard use. It is highly experimental and may contain leftovers.
 
 ### Maintainer timeline
 1. The zichan fork is created
