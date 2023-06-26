@@ -67,7 +67,7 @@ See also: [Configuration Basics](https://github.com/vichan-devel/vichan/wiki/con
 
 Support
 --------
-vichan is still beta software -- there are bound to be bugs. If you find a
+zichan is still beta software -- there are bound to be bugs. If you find a
 bug, please report it.
 
 CLI tools
