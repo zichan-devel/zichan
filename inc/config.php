@@ -75,7 +75,7 @@
 	// Check validity of the reverse DNS of IP addresses. Highly recommended.
 	$config['fcrdns'] = true;
 
-	// When executing most command-line tools (such as `convert` for ImageMagick image processing), add this
+	// When executing most command-line tools, add this
 	// to the environment path (seperated by :).
 	$config['shell_path'] = '/usr/local/bin';
 
@@ -482,8 +482,9 @@
 	$config['force_body'] = true;
 	// Do you need a body for new threads?
 	$config['force_body_op'] = true;
-	// Require an image for threads?
-	$config['force_image_op'] = true;
+
+	// Do NOT touch this. This is required for Zichan to function.
+	$config['force_image_op'] = false;
 
 	// Strip superfluous new lines at the end of a post.
 	$config['strip_superfluous_returns'] = true;
@@ -525,9 +526,9 @@
 	// Reply limit (stops bumping thread when this is reached).
 	$config['reply_limit'] = 250;
 
-	// Image hard limit (stops allowing new image replies when this is reached if not zero).
+	// Image hard limit (stops allowing new image replies when this is reached if not zero). Leftover from vichan.
 	$config['image_hard_limit'] = 0;
-	// Reply hard limit (stops allowing new replies when this is reached if not zero).
+	// Reply hard limit (stops allowing new replies when this is reached if not zero). Leftover from vichan.
 	$config['reply_hard_limit'] = 0;
 
 
@@ -552,8 +553,8 @@
 	$config['link_prefix'] = ''; 
 	$config['url_ads'] = &$config['link_prefix'];	 // leave alias
 	
-	// Allow "uploading" images via URL as well. Users can enter the URL of the image and then vichan will
-	// download it. Not usually recommended.
+	// Allow "uploading" images via URL as well. Users can enter the URL of the image and then zichan will
+	// download it. Leftover from vichan. Non-functional.
 	$config['allow_upload_by_url'] = false;
 	// The timeout for the above, in seconds.
 	$config['upload_by_url_timeout'] = 15;
@@ -583,7 +584,7 @@
 	// $config['custom_tripcode']['##securetrip'] = '!!somethingelse';
 
 	// Allow users to mark their image as a "spoiler" when posting. The thumbnail will be replaced with a
-	// static spoiler image instead (see $config['spoiler_image']).
+	// static spoiler image instead (see $config['spoiler_image']). Leftover from vichan.
 	$config['spoiler_images'] = false;
 
 	// With the following, you can disable certain superfluous fields or enable "forced anonymous".
@@ -705,19 +706,17 @@
 
 /*
  * ====================
- *  Image settings
+ *  Image settings, AKA leftovers from vichan.
  * ====================
  */
-	// Maximum number of images allowed. Increasing this number enabled multi image.
-	// If you make it more than 1, make sure to enable the below script for the post form to change.
-	// $config['additional_javascript'][] = 'js/multi-image.js';
-	$config['max_images'] = 1;
+	// Maximum number of images allowed. Do not change this, leftover from vichan.
+	$config['max_images'] = 0;
 
 	// Method to use for determing the max filesize. 
 	// "split" means that your max filesize is split between the images. For example, if your max filesize
 	// is 2MB, the filesizes of all files must add up to 2MB for it to work. 
 	// "each" means that each file can be 2MB, so if your max_images is 3, each post could contain 6MB of 
-	// images. "split" is recommended.
+	// images. "split" is recommended. Leftover from vichan.
 	$config['multiimage_method'] = 'split';
 
 	// For resizing, maximum thumbnail dimensions.
@@ -1130,15 +1129,15 @@
 	$config['error']['toolong_body']	= _('The body was too long.');
 	$config['error']['tooshort_body']	= _('The body was too short or empty.');
 	$config['error']['toomanylines']	= _('Your post contains too many lines!');
-	$config['error']['noimage']		= _('You must upload an image.');
-	$config['error']['toomanyimages'] = _('You have attempted to upload too many images!');
+	$config['error']['noimage']		= _('Zichan's configuration is broken. Change force_image_op to false.');
+	$config['error']['toomanyimages'] = _('You can't upload images on a textboard.');
 	$config['error']['nomove']		= _('The server failed to handle your upload.');
 	$config['error']['fileext']		= _('Unsupported image format.');
 	$config['error']['noboard']		= _('Invalid board!');
 	$config['error']['nonexistant']		= _('Thread specified does not exist.');
 	$config['error']['locked']		= _('Thread locked. You may not reply at this time.');
 	$config['error']['reply_hard_limit']	= _('Thread has reached its maximum reply limit.');
-	$config['error']['image_hard_limit']	= _('Thread has reached its maximum image limit.');
+	$config['error']['image_hard_limit']	= _('Thread has reached its maximum image limit since this is a textboard.');
 	$config['error']['nopost']		= _('You didn\'t make a post.');
 	$config['error']['flood']		= _('Flood detected; Post discarded.');
 	$config['error']['spam']		= _('Your request looks automated; Post discarded.');
@@ -1576,8 +1575,8 @@
 	$config['mod']['spoilerimage'] = JANITOR;
 	// Edit bans
 	$config['mod']['edit_ban'] = &$config['mod']['ban'];
-	// Delete file (and keep post)
-	$config['mod']['deletefile'] = JANITOR;
+	// Delete file - not needed and leftover from vichan
+	$config['mod']['deletefile'] = DISABLED;
 	// Delete all posts by IP
 	$config['mod']['deletebyip'] = MOD;
 	// Delete all posts by IP across all boards
