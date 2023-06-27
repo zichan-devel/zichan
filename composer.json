@@ -1,6 +1,6 @@
 {
-    "name": "vichan-devel/vichan",
-    "description": "vichan imageboard",
+    "name": "zichan-devel/zichan",
+    "description": "zichan textboard",
     "type": "project",
     "require": {
         "ext-mbstring": ">=5.4",
